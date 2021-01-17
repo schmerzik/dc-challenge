@@ -1,0 +1,76 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "chg-orders",
+  "expectations": [
+    {
+      "kwargs": {
+        "column": "ProductId"
+      },
+      "meta": {},
+      "expectation_type": "expect_column_to_exist"
+    },
+    {
+      "kwargs": {
+        "column": "OrderId"
+      },
+      "meta": {},
+      "expectation_type": "expect_column_to_exist"
+    },
+    {
+      "kwargs": {
+        "column": "CustomerId"
+      },
+      "meta": {},
+      "expectation_type": "expect_column_to_exist"
+    },
+    {
+      "kwargs": {
+        "column": "Quantity"
+      },
+      "meta": {},
+      "expectation_type": "expect_column_to_exist"
+    },
+    {
+      "kwargs": {
+        "column": "Datetime"
+      },
+      "meta": {},
+      "expectation_type": "expect_column_to_exist"
+    },
+    {
+      "kwargs": {
+        "column": "OrderId",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "expectation_type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "kwargs": {
+        "column": "CustomerId",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "expectation_type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "kwargs": {
+        "column": "ProductId",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "expectation_type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "kwargs": {
+        "column": "Datetime",
+        "mostly": 0.99
+      },
+      "meta": {},
+      "expectation_type": "expect_column_values_to_not_be_null"
+    }
+  ],
+  "meta": {
+    "great_expectations_version": "0.13.4"
+  }
+}

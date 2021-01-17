@@ -1,0 +1,10 @@
+dbt-bigquery
+pybigquery
+great_expectations
+apache-airflow
+SQLAlchemy
+psycopg2-binary
+airflow-provider-great-expectations
+airflow-dbt
+apache-beam[gcp]
+cloudstorage
