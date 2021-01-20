@@ -6,5 +6,7 @@ SQLAlchemy
 psycopg2-binary
 airflow-provider-great-expectations
 airflow-dbt
+virtualenv
+setuptools
 apache-beam[gcp]
-cloudstorage
+google-cloud-storage
