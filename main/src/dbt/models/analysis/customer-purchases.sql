@@ -48,4 +48,20 @@ transform(
 options(model_type='kmeans',early_stop=true,max_iterations=5,num_clusters=5,KMEANS_INIT_METHOD='RANDOM')
 as (select * from source.`customer-purchases`cp where DaysSinceLastPurchase < 754);
 
+VIEW MODEL CLUSTERS:
+WITH C AS (
+SELECT 
+centroid_id,
+ARRAY_AGG(STRUCT(feature AS name, ROUND(numerical_value,1) AS value) ORDER BY centroid_id) AS cluster
+FROM ML.CENTROIDS(MODEL source.cust_cluster)
+GROUP BY centroid_id
+)
+SELECT
+CONCAT('Cluster#', CAST(centroid_id AS STRING)) AS centroid,
+(SELECT value from unnest(cluster) WHERE name = 'PurchaseCount') AS PurchaseCount,
+(SELECT value from unnest(cluster) WHERE name = 'ProductCount') AS ProductCount,
+(SELECT value from unnest(cluster) WHERE name = 'TotalPurchasePrice') AS TotalPurchasePrice,
+(SELECT value from unnest(cluster) WHERE name = 'DaysSinceLastPurchase') AS DaysSinceLastPurchase
+FROM C
+ORDER BY centroid_id ASC;
 */
