@@ -45,11 +45,3 @@ Scripts: this folder contains scripts to perform specific tasks:
 	c. start-airflow-prod.sh: starts the Airflow webserver and scheduler
 		if the DAGs were configured for a scheduled run, they would now be picked up at the requested intervals (we didn't fill in the schedule, only manual for this challenge)
 		if you mapped the ports on the container, you could now access the Airflow server for monitoring etc
-
-
-
-4. check-customer-clustering.sh: creates a ML model for customer clustering
---> this is run ad hoc. It could be included in the previous flow for automation.
-
-5. check-sales-series.sh: creates a ML model for predicting sales
---> this is run ad hoc. It could be included in the previous flow for automation.
