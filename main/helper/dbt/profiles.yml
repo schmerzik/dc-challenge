@@ -1,0 +1,11 @@
+dbt_challenge:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: nomadic-asset-268508
+      dataset: source
+      threads: 1
+      keyfile: /usr/src/challenge/cred/dc-challenge-key.json
+      timeout_seconds: 300

@@ -1,0 +1,6 @@
+AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:La1vHxunO9z4llmo@104.199.105.222/airflow
+CHALLENGE_CRYPT_KEY=xa4FiPBlfBJOHwq075Ts6GlNnfwcA9S1C8SvK4Ikq473L5i8z3XmdRfgCfJjhbRw
+CHALLENGE_AF_ADMIN=Adminstrat0r
+CHALLENGE_AF_MAIL=erik.vanhauwaert@gmail.com
+CHALLENGE_AF_PASS=IM0uwPT0X28ycNoS
+CHALLENGE_GE_BQ=bigquery://nomadic-asset-268508/source

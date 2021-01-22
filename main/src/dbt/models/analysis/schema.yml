@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+    - name: customer-purchases
+      description: "Customer list with total order value, count and days since last purchase"
+      columns:
+          - name: CustomerId
+            description: "The primary key for the Customer"
+            tests:
+                - unique
+                - not_null
+    - name: sales-series
+      description: "Total sales by (ascending) date"
+      columns:
+          - name: SalesDate
+            description: "The primary key for the Customer"
+            tests:
+                - unique
+                - not_null
